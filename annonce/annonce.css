@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #1a2a6c, #00416a);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #fdbb2d;
+}
+
+.annonces {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.annonces-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.annonces h2 {
+  font-size: 2rem;
+  color: #1a2a6c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.admin-link {
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, #1a2a6c, #00416a);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-link:hover {
+  background: linear-gradient(135deg, #00416a, #1a2a6c);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.annonce-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.annonce-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #1a2a6c;
+}
+
+.annonce-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.annonce-card h3 {
+  color: #1a2a6c;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.annonce-card p {
+  margin-bottom: 1.2rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.annonce-card small {
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading, .error, .empty {
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1 / -1;
+}
+
+.loading { color: #1a2a6c; font-size: 1.2rem; }
+.error { background: #ffebee; color: #c62828; border-radius: 8px; }
+.empty { color: #777; }
+
+.last-updated {
+  text-align: right;
+  margin-top: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+button.edit { background: #1a2a6c; color: white; }
+button.delete { background: #c62828; color: white; }
+
+button:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .annonce-container { grid-template-columns: 1fr; }
+  .annonces-header { flex-direction: column; align-items: flex-start; }
+  .annonces h2 { font-size: 1.6rem; }
+  header { flex-direction: column; gap: 15px; text-align: center; }
+}

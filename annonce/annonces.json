@@ -1,0 +1,14 @@
+{
+  "annonces": [
+    {
+      "titre": "Rentrée scolaire 2025-2026",
+      "message": "La rentrée scolaire est prévue pour le lundi 1er septembre 2025 à 7h30 dans la cour principale.",
+      "date": "2025-08-20"
+    },
+    {
+      "titre": "Réunion des parents d'élèves",
+      "message": "Une réunion des parents d'élèves aura lieu le samedi 30 août 2025 à 10h00 dans l'amphithéâtre.",
+      "date": "2025-08-15"
+    }
+  ]
+}
