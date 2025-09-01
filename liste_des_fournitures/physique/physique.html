@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fournitures - Physique Chimie</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #ecf0f1;
+            --border-color: #bdc3c7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        .niveaux-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .niveau {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .niveau h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .liste-fournitures {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .liste-fournitures li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+        
+        .important {
+            background-color: #fff4f4;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+        }
+        
+        @media (min-width: 768px) {
+            .niveau {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .niveau {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Liste de Fournitures</h1>
+            <p class="subtitle">Département de Physique Chimie</p>
+        </header>
+        
+        <div class="niveaux-container">
+            <div class="niveau">
+                <h2>6ème et 5ème</h2>
+                <ul class="liste-fournitures">
+                    <li>1 cahier grand format de 200 pages</li>
+                    <li>Les instruments de géométrie</li>
+                    <li>Les crayons de couleur</li>
+                    <li>Livre de physique chimie 6ème pour la 6ème et 5ème pour la 5ème (APC) si disponible</li>
+                </ul>
+            </div>
+            
+            <div class="niveau">
+                <h2>4ème et 3ème</h2>
+                <ul class="liste-fournitures">
+                    <li>1 cahier grand format de 200 pages</li>
+                    <li>Les instruments de géométrie</li>
+                    <li>Les crayons de couleur</li>
+                    <li>Papier calque pour la 4ème et papier millimétré pour la 3ème</li>
+                    <li>Livret de physique chimie collection Alpha</li>
+                </ul>
+            </div>
+            
+            <div class="niveau">
+                <h2>2nde S, 1ère S, Tle D et C</h2>
+                <ul class="liste-fournitures">
+                    <li>2 cahiers grand format de 200 pages</li>
+                    <li>Les instruments de géométrie</li>
+                    <li>Les crayons de couleur</li>
+                    <li>Papier millimétré</li>
+                    <li>Livret de physique chimie collection Alpha</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="important">
+            <p>NB: LES LIVRES ET LES LIVRETS SERONT ACHETÉS AU DÉPARTEMENT DE PHYSIQUE CHIMIE DU LYSER</p>
+        </div>
+        
+        <footer>
+            <p>Année scolaire 2023-2024 | Département de Physique Chimie</p>
+        </footer>
+    </div>
+</body>
+</html>

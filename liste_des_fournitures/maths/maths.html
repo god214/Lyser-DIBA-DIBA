@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fournitures Scolaires - Mathématiques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e88e5, #0d47a1);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #bbdefb;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .cycle {
+            margin-bottom: 30px;
+        }
+        
+        .supplies-list {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        .supplies-list li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .supplies-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #bbdefb;
+            font-size: 1.5rem;
+        }
+        
+        .note {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .math-symbols {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 2rem;
+            opacity: 0.7;
+            letter-spacing: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Département de MATHÉMATIQUES</h1>
+            <p class="subtitle">Liste de fournitures scolaires</p>
+        </header>
+        
+        <div class="math-symbols">+ − × ÷ = √ ∞ π ∫ ∑</div>
+        
+        <div class="cycle">
+            <h2>Premier cycle (6e, 5e, 4e et 3e)</h2>
+            <ul class="supplies-list">
+                <li>2 cahiers : un grand format 300 pages (cours) et un de 200 pages (exercices)</li>
+                <li>Livre cargo</li>
+                <li>Calculatrice</li>
+                <li>Instruments de géométrie</li>
+                <li>Pots de colle et paquet de copies doubles</li>
+            </ul>
+            <div class="note">
+                • MCM pour les 3e
+            </div>
+        </div>
+        
+        <div class="cycle">
+            <h2>Second cycle (2nde, 1ère et Terminale)</h2>
+            <ul class="supplies-list">
+                <li>2 cahiers : un cahier grand format de 300 pages (cours) et un cahier de 200 pages (exercices)</li>
+                <li>Livre CIAM/Cargo (Série et Scientifique)</li>
+                <li>Instruments de géométrie</li>
+                <li>Calculatrice</li>
+                <li>Pots de colle et paquet de copies doubles</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Année scolaire 2023-2024</p>
+        </footer>
+    </div>
+</body>
+</html>

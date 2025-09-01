@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fournitures - Éducation Musicale</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #003366;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+        
+        .niveaux {
+            font-style: italic;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .liste-fournitures {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .liste-fournitures li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: #e6f2ff;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        .liste-fournitures li:hover {
+            background-color: #cce5ff;
+            transform: translateX(5px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #0066cc;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Liste de Fournitures</h1>
+            <p class="niveaux">Éducation Musicale - Niveaux : 5e, 3e et Tle</p>
+        </header>
+        
+        <main>
+            <ul class="liste-fournitures">
+                <li>1 flûte à bec Soprano</li>
+                <li>1 cahier de 192 pages ou 200 pages (leçons et exercices)</li>
+                <li>Stylos (bleu, rouge, vert, noir)</li>
+                <li>1 gomme</li>
+                <li>1 règle</li>
+                <li>1 crayon</li>
+                <li>Taille crayon</li>
+                <li>Paquets de copies doubles</li>
+                <li>1 correcteur</li>
+            </ul>
+        </main>
+        
+        <footer>
+            <p>Année scolaire 2023-2024</p>
+        </footer>
+    </div>
+</body>
+</html>
