@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fournitures Scolaires - Théâtre</title>
+    <style>
+        body {
+            background-color: #1a237e; /* Bleu foncé */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #5c6bc0;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            color: #9fa8da;
+            margin-top: 10px;
+            font-size: 1.4em;
+        }
+        
+        .year {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e3f2fd;
+            margin: 5px 0;
+        }
+        
+        .completed {
+            text-align: right;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .ministry {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background-color: rgba(48, 63, 159, 0.5);
+            border-radius: 8px;
+        }
+        
+        .ministry h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        
+        .ministry p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        
+        .supplies-list {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .supplies-list h3 {
+            color: #9fa8da;
+            border-bottom: 1px solid #5c6bc0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            background-color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .play {
+            font-style: italic;
+            color: #c5cae9;
+        }
+        
+        .author {
+            font-weight: bold;
+            color: #9fa8da;
+        }
+        
+        .level {
+            color: #ffcc80;
+        }
+        
+        .full-text {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(48, 63, 159, 0.5);
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            opacity: 0.8;
+            border-top: 1px solid #5c6bc0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="year">2026</div>
+            <div class="completed">Terminé 50</div>
+        </div>
+        
+        <div class="ministry">
+            <h3>Ministère de l'Education Nationale</h3>
+            <p>Lycée Diba Diba Bel Air</p>
+            <p>Département Arts</p>
+        </div>
+        
+        <div class="supplies-list">
+            <h3>Liste de fournitures scolaires</h3>
+            <ul>
+                <li>1 Cahier 100 pages (Grand / Petit format)</li>
+                <li>Stylos (Bleu, noir, rouge)</li>
+                <li>
+                    <span class="play">Le Combat d'Amalya</span> 
+                    (Pièce de théâtre) <span class="author">Patrick NZOGHE NDO</span> 
+                    (<span class="level">Niveau 4ème</span>)
+                </li>
+                <li>
+                    <span class="play">L'Histoire d'une vie</span> 
+                    (Pièce de théâtre) <span class="author">Patrick NZOGHE NDO</span> 
+                    (<span class="level">Niveau 3ème</span>)
+                </li>
+                <li>
+                    <span class="play">La Tragédie du Roi Christophe</span> 
+                    (Pièce de théâtre) <span class="author">Aimé Césaire</span> 
+                    (<span class="level">Niveau Terminale toutes séries</span>)
+                </li>
+            </ul>
+        </div>
+        
+        <div class="full-text">
+            Texte intégral : 457
+        </div>
+        
+        <div class="footer">
+            Merci de préparer ces fournitures pour le début de l'année scolaire 2026
+        </div>
+    </div>
+</body>
+</html>

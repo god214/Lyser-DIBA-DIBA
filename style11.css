@@ -1,0 +1,490 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f59e0b;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1001;
+}
+
+.menu-toggle.active i::before {
+    content: "\f00d";
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navbar li {
+    margin-left: 1.5rem;
+    white-space: nowrap;
+}
+
+.navbar li a {
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar li a:hover {
+    color: #f59e0b;
+}
+
+.btn-commande {
+    background-color: #f59e0b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-commande:hover {
+    background-color: #d97706;
+}
+
+/* Section Bannière */
+.banniere {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/diba.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 10%;
+    margin-top: 70px;
+}
+
+.contenue {
+    width: 100%;
+}
+
+.contenue h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.contenue p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn1 {
+    background-color: #f59e0b;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.btn1:hover {
+    background-color: #d97706;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section A propos */
+.apropos {
+    padding: 5rem 10%;
+}
+
+.ban {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.ban1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.titre-texte {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #1e3a8a;
+}
+
+.titre-texte span {
+    color: #f59e0b;
+}
+
+.ban1 p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.img img:hover {
+    transform: scale(1.05);
+}
+
+/* Section Contact */
+.contact {
+    padding: 5rem 10%;
+    background-color: #f0f4f8;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+    justify-content: center;
+}
+
+.social-btn i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.facebook:hover {
+    background-color: #0D5FD8;
+    transform: translateY(-3px);
+}
+
+.tiktok {
+    background-color: #000000;
+}
+
+.tiktok:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banniere {
+        padding: 0 7%;
+    }
+    
+    .apropos, .contact {
+        padding: 4rem 7%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar li {
+        margin-left: 1rem;
+    }
+    
+    .contenue h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .ban {
+        gap: 1.5rem;
+    }
+    
+    .contenue h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #1e3a8a;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem;
+        transition: left 0.4s ease-in-out;
+        z-index: 1000;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+    
+    .navbar.active {
+        left: 0;
+    }
+    
+    .navbar li {
+        margin: 1.2rem 0;
+        width: 100%;
+    }
+    
+    .btn-commande {
+        display: block;
+        margin: 0.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .banniere {
+        margin-top: 70px;
+        padding: 0 5%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .contenue h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn1 {
+        min-width: unset;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .apropos, .contact {
+        padding: 3rem 5%;
+    }
+    
+    .ban {
+        flex-direction: column;
+    }
+    
+    .ban1 {
+        margin-bottom: 2rem;
+    }
+    
+    .titre-texte {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.8rem 4%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .banniere {
+        padding: 0 4%;
+        margin-top: 60px;
+    }
+    
+    .contenue h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contenue p {
+        font-size: 1rem;
+    }
+    
+    .btn1 {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .apropos, .contact {
+        padding: 2.5rem 4%;
+    }
+    
+    .titre-texte {
+        font-size: 1.7rem;
+    }
+    
+    .social-btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .social-btn i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .contenue h2 {
+        font-size: 1.4rem;
+    }
+    
+    .btn1 {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .navbar {
+        width: 85%;
+        padding: 4rem 1.5rem;
+    }
+    
+    .titre-texte {
+        font-size: 1.6rem;
+    }
+    
+    .ban1 p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .contenue h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navbar {
+        width: 100%;
+    }
+    
+    .btn1 {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Ajustements pour les très grands écrans */
+@media (min-width: 1600px) {
+    .banniere {
+        padding: 0 15%;
+    }
+    
+    .apropos, .contact {
+        padding: 6rem 15%;
+    }
+}
+
+/* Correction tablettes mode paysage */
+@media (max-width: 1024px) and (min-width: 769px) and (orientation: landscape) {
+    .banniere {
+        height: auto;
+        padding: 5rem 10%;
+    }
+    
+    .navbar li {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Optimisation images */
+.img {
+    max-width: 100%;
+    height: auto;
+}

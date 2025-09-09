@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier Scolaire 2025-2026 - Gabon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a6fc4 0%, #0d4a8a 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a6fc4 0%, #0d4a8a 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: #0d4a8a;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .intro {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #0d4a8a;
+        }
+        
+        .calendar-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background-color: #1a6fc4;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn:hover {
+            background-color: #0d4a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .calendar-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: none;
+            color: #333;
+        }
+        
+        .calendar-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: #0d4a8a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        
+        .calendar-table th {
+            background-color: #e6f0ff;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #1a6fc4;
+            color: #0d4a8a;
+        }
+        
+        .calendar-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .calendar-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .calendar-table tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .event-date {
+            font-weight: 600;
+            color: #0d4a8a;
+            min-width: 120px;
+        }
+        
+        .event-desc {
+            color: #555;
+        }
+        
+        .holiday {
+            background-color: #fff9e6;
+        }
+        
+        .holiday .event-date {
+            color: #e67e22;
+        }
+        
+        .exam {
+            background-color: #f9f0ff;
+        }
+        
+        .exam .event-date {
+            color: #8e44ad;
+        }
+        
+        .break {
+            background-color: #e6f7ff;
+        }
+        
+        .break .event-date {
+            color: #2980b9;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            color: #0d4a8a;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a6fc4;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(26, 111, 196, 0.3);
+        }
+        
+        .download-btn:hover {
+            background-color: #0d4a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(13, 74, 138, 0.4);
+        }
+        
+        .download-icon {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #0d4a8a;
+            color: #ecf0f1;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .calendar-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .nav-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">GN</div>
+            <div>
+                <h1>Calendrier Scolaire 2025-2026</h1>
+                <p class="subtitle">République Gabonaise - Ministère de l'Éducation Nationale</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <p>Consultez le calendrier scolaire officiel de l'année 2025-2026 en République Gabonaise. Cliquez sur les onglets ci-dessous pour visualiser les différentes périodes de l'année scolaire.</p>
+        </div>
+        
+        <div class="calendar-nav">
+            <button class="nav-btn" onclick="showCalendar('rentree')">Rentrée Scolaire</button>
+            <button class="nav-btn" onclick="showCalendar('trimestre1')">Premier Trimestre</button>
+            <button class="nav-btn" onclick="showCalendar('trimestre2')">Deuxième Trimestre</button>
+            <button class="nav-btn" onclick="showCalendar('trimestre3')">Troisième Trimestre</button>
+            <button class="nav-btn" onclick="showCalendar('examens')">Examens et Fin d'Année</button>
+        </div>
+        
+        <div id="rentree" class="calendar-section active">
+            <h2>Rentrée Scolaire 2025-2026</h2>
+            <table class="calendar-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 25 août 2025</td>
+                    <td class="event-desc">Rentrée administrative pour l'ensemble des établissements publics et privés</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 1er septembre 2025</td>
+                    <td class="event-desc">Rentrée administrative pour le réseau des écoles publiques conventionnées</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 1er septembre 2025</td>
+                    <td class="event-desc">Rentrée des classes pour l'ensemble des établissements publics et privés</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Mardi 2 septembre 2025</td>
+                    <td class="event-desc">Rentrée des classes pour le réseau des écoles publiques conventionnées</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="trimestre1" class="calendar-section">
+            <h2>Premier Trimestre</h2>
+            <table class="calendar-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 1er septembre 2025</td>
+                    <td class="event-desc">Début du premier trimestre</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Samedi 1er novembre 2025</td>
+                    <td class="event-desc">Fête de la Toussaint</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 8 novembre 2025</td>
+                    <td class="event-desc">Arrêt des notes</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 10 au samedi 15 novembre 2025</td>
+                    <td class="event-desc">Activités de fin de trimestre</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 15 novembre 2025</td>
+                    <td class="event-desc">Remise des bulletins</td>
+                </tr>
+                <tr class="break">
+                    <td class="event-date">Samedi 15 au dimanche 23 novembre 2025</td>
+                    <td class="event-desc">Vacances intermédiaires</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="trimestre2" class="calendar-section">
+            <h2>Deuxième Trimestre</h2>
+            <table class="calendar-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 24 novembre 2025</td>
+                    <td class="event-desc">Début du deuxième trimestre</td>
+                </tr>
+                <tr class="break">
+                    <td class="event-date">Samedi 20 décembre 2025 au dimanche 4 janvier 2026</td>
+                    <td class="event-desc">Vacances de Noël et de nouvel an</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 14 février 2026</td>
+                    <td class="event-desc">Arrêt des notes</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 16 au samedi 21 février 2026</td>
+                    <td class="event-desc">Activités de fin de trimestre</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 21 février 2026</td>
+                    <td class="event-desc">Remise des bulletins</td>
+                </tr>
+                <tr class="break">
+                    <td class="event-date">Samedi 21 février au dimanche 8 mars 2026</td>
+                    <td class="event-desc">Vacances de fin du 2e trimestre</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="trimestre3" class="calendar-section">
+            <h2>Troisième Trimestre</h2>
+            <table class="calendar-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                </tr>
+                <tr>
+                    <td class="event-date">Lundi 9 mars 2026</td>
+                    <td class="event-desc">Début du troisième trimestre</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Lundi 23 март 2026</td>
+                    <td class="event-desc">Journée Nationale de l'Enseignant</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Lundi 6 avril 2026</td>
+                    <td class="event-desc">Fête de Pâques</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Vendredi 1er mai 2026</td>
+                    <td class="event-desc">Fête du travail</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Jeudi 14 mai 2026</td>
+                    <td class="event-desc">Fête de l'Association</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 23 mai 2026</td>
+                    <td class="event-desc">Arrêt des notes (après les cours)</td>
+                </tr>
+                <tr class="holiday">
+                    <td class="event-date">Lundi 25 mai 2026</td>
+                    <td class="event-desc">Fête de Pentecôte</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Mardi 26 au samedi 30 mai 2026</td>
+                    <td class="event-desc">Activités de fin de trimestre</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 30 mai 2026</td>
+                    <td class="event-desc">Remise des bulletins</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="examens" class="calendar-section">
+            <h2>Examens et Fin d'Année Scolaire</h2>
+            <table class="calendar-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Événement</th>
+                </tr>
+                <tr class="exam">
+                    <td class="event-date">Lundi 1er juin au samedi 4 juillet 2026</td>
+                    <td class="event-desc">Période des examens nationaux</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 30 mai 2026</td>
+                    <td class="event-desc">Fin d'année scolaire pour les classes du pré-primaire, du primaire et du secondaire sans examen</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Jeudi 25 juin 2026</td>
+                    <td class="event-desc">Fin d'année scolaire pour le réseau des écoles publiques conventionnées</td>
+                </tr>
+                <tr>
+                    <td class="event-date">Samedi 4 juillet 2026</td>
+                    <td class="event-desc">Fin d'année scolaire pour les classes avec examen du secondaire</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="download-section">
+            <h2>Télécharger le calendrier complet</h2>
+            <p>Vous pouvez télécharger la version officielle du calendrier scolaire au format PDF.</p>
+            <a href="pdf/calendrier.pdf" class="download-btn" onclick="downloadPDF()">
+                <span class="download-icon">📄</span>
+                Télécharger le PDF
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Ministère de l'Éducation Nationale, de l'Instruction Civique et de la Formation Professionnelle</p>
+        <p>République Gabonaise - Union-Travail-Justice</p>
+        <p>© 2025 - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function showCalendar(sectionId) {
+            // Masquer toutes les sections
+            const sections = document.querySelectorAll('.calendar-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        function downloadPDF() {
+            alert("La fonction de téléchargement du PDF serait normalement implémentée ici. Dans un cas réel, cela téléchargerait le fichier calendrier_scolaire_2025-2026.pdf");
+            // En production, cela pourrait être:
+            // window.open('calendrier_scolaire_2025-2026.pdf', '_blank');
+        }
+    </script>
+</body>
+</html>
